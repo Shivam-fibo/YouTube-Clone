@@ -1,11 +1,19 @@
 {
   "name": "project1",
   "version": "1.0.0",
-  "description": "",
+  "description": "A full stack project with focus on backend",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodmon src/index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDepandencies": {
+    "nodmon": "^3.0.1"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.2"
+  }
 }
