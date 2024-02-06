@@ -12,4 +12,11 @@ app.use(express.urlencoded())
 app.use(express.static())
 app.use(express.cookieParser())
 
+// routes import
+import userRouter from './routes/user.routes.js'
+
+// routed decalaretion
+
+app.use("/api/v1/users", userRouter)
+
 export {app}
