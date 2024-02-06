@@ -1,6 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import bcrypt from 'bcrypt'
-import jwt from 'jsonwebtoken'
+
 
 
 const videoSchema = new Schema(
@@ -43,13 +42,6 @@ const videoSchema = new Schema(
     }
 )
 
-    userSchema.pre("save", async function(next){
-        if(!this.isModified("password")) return next
-
-        this.password = bcrypt.hash(this.password, 10)
-        next()
-    })
-
-    // defining custome method
+  
 
 export const Video = mongoose.model("Video", videoSchema)
