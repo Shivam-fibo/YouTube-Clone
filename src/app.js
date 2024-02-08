@@ -8,9 +8,10 @@ app.use(cors({
 }))
 
 app.use(express.json())
-app.use(express.urlencoded())
-app.use(express.static())
-app.use(express.cookieParser())
+// app.use(express.urlencoded())
+// app.use(express.static())
+// app.use(express.cookieParser())
+// app.use(express.static(__dirname + '/public'));
 
 // routes import
 import userRouter from './routes/user.routes.js'
